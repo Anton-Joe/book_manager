@@ -9,9 +9,9 @@
             </tr>
             {% for book in books %}
                 <tr>
-                    <th>{{ forloop.counter }}</th>
-                    <th>{{ book.1 }}</th>
-                    <th>{{ book.2 }}</th>
+                    <td>{{ forloop.counter }}</td>
+                    <td><a href="{% url 'book_detail' book_id=book.0 %}">{{ book.1 }}</a></td>
+                    <td>{{ book.2 }}</td>
                 </tr>
             {% endfor %}
         </thead>
